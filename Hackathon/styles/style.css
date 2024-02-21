@@ -1,0 +1,203 @@
+html, body {
+    background-color: grey;
+    color: #DADEDF;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    text-align: center;
+    background-color: #484848;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    text-align: center;
+    background-color: #484848;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #DADEDF;
+    transition: all 0.3s;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    transform: rotate(45deg);
+    color: grey;
+}
+
+
+#search {
+    display: flex;
+    align-items: center;
+}
+
+#searchbox {
+    width: 150px;
+    padding: 5px;
+    border: 1px solid #DADEDF;
+    border-radius: 3px;
+}
+
+#search_button {
+    background: darkgrey;
+    color: #DADEDF;
+    border: none;
+    padding: 5px 10px;
+}
+#logo {
+    width: 40px; /* Set the desired width */
+    height: 40px; /* Set the desired height */
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+#Front_Content {
+    margin-top: 10px;
+    color: #DADEDF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text within the container */
+}
+
+#Front_Content {
+    text-align: center;
+    padding: 20px;
+}
+
+#Front_Content h1 {
+    font-size: 40px; /* Slightly larger font size */
+    margin: 10px 0;
+    font-weight: bold; /* Add a bold font weight for a professional look */
+    line-height: 1.3; /* Increased line height for readability */
+    letter-spacing: 1px; /* Slight letter-spacing for emphasis */
+}
+
+
+#Front_Content h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.followlink-container {
+    text-align: center;
+    margin: 0 auto; /* Center the container horizontally */
+    max-width: 80%; /* Limit the width of the container */
+}
+
+.followlink {
+    font-size: 20px;
+    margin: 10px 0;
+    font-style: italic; /* Add italics for emphasis */
+    border: 2px dashed black; /* Dashed border with the professional blue color */
+    padding: 10px;
+    background-color: darkgrey;
+    color: #484848;
+    border-radius: 10px; /* Rounded corners for the box */
+    animation: changeColor 2s infinite; /* Automatically change color every 2 seconds, infinitely */
+
+}
+
+#Front_Content h1,
+#Front_Content h3,
+.followlink {
+    transition: transform 0.3s ease-in-out; /* Add a transform transition with ease-in-out timing */
+}
+
+#Front_Content h1:hover,
+#Front_Content h3:hover,
+.followlink:hover {
+    transform: scale(1.05); /* Scale up the text on hover */
+}
+
+footer {
+    text-align: center;
+    background-color: #484848; 
+    color: #DADEDF; /* Text color in the footer */
+    padding: 10px 0; /* Padding for spacing within the footer */
+}
+
+footer p {
+    margin: 0; /* Remove default margin for the paragraph */
+}
+
+
+footer {
+    text-align: center;
+    background-color: #484848;
+    color: #DADEDF;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+/* Your existing CSS styles */
+
+.button-container {
+    text-align: center; /* Center-align the button within the container */
+    margin-top: 20px; /* Add margin for spacing */
+}
+
+.button {
+
+    margin-top: 15px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #484848;
+    color: #DADEDF;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for attention */
+}
+
+.button:hover {
+    background-color: black;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Change box shadow on hover */
+}
+
+/* Define keyframes for the automatic color transition */
+@keyframes changeColor {
+    0% {
+        color: initial; /* Start with the initial color (or any other color you prefer) */
+    }
+    50% {
+        color: #DADEDF; /* Change the text color midway (you can choose your desired color) */
+    }
+    100% {
+        color: initial; /* Return to the initial color */
+    }
+}
+
+

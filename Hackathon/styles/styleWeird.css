@@ -1,0 +1,205 @@
+html, body {
+    background-color: grey;
+    color: #DADEDF;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #484848;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #DADEDF;
+    transition: all 0.3s;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    transform: rotate(45deg);
+    color: grey;
+}
+
+#search {
+    display: flex;
+    align-items: center;
+}
+
+#searchbox {
+    width: 150px;
+    padding: 5px;
+    border: 1px solid #DADEDF;
+    border-radius: 3px;
+}
+
+#search_button {
+    background: darkgrey;
+    color: #DADEDF;
+    border: none;
+    padding: 5px 10px;
+}
+#logo {
+    width: 40px; /* Set the desired width */
+    height: 40px; /* Set the desired height */
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+#Front_Content {
+    margin-top: 10px;
+    color: #DADEDF;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+}
+
+#Front_Content {
+    text-align: right;
+    padding: 40px;
+}
+
+#Front_Content h1 {
+    font-size: 40px;
+    margin: 10px 0;
+    font-style: italic;
+    line-height: 1.3;
+    letter-spacing: 20px; /* Increase letter-spacing for more spacing */
+    word-spacing: 20px; /* Increase word-spacing for words to be farther apart */
+}
+
+#Front_Content h3 {
+    font-size: 20px;
+}
+
+.followlink-container {
+    margin: 0 auto; /* Center the container horizontally */
+    max-width: 80%; /* Limit the width of the container */
+}
+
+.followlink {
+    font-size: 20px;
+    margin: 10px 0;
+    font-style: bold; /* Add italics for emphasis */
+    padding: 10px;
+    color: #484848;
+}
+
+#Front_Content h3,
+.followlink {
+    transition: transform 1s ease-in-out; /* Add a transform transition with ease-in-out timing */
+}
+
+#Front_Content h3:hover,
+.followlink:hover {
+    transform: scale(1.05); /* Scale up the text on hover */
+}
+
+footer {
+    text-align: center;
+    background-color: #333; /* Footer background color */
+    color: #DADEDF; /* Text color in the footer */
+    padding: 10px 0; /* Padding for spacing within the footer */
+}
+
+footer p {
+    margin: 0; /* Remove default margin for the paragraph */
+}
+
+
+footer {
+    text-align: center;
+    background-color: #484848;
+    color: #DADEDF;
+    padding: 10px 0;
+    position: fixed;
+    left: 0;
+    width: 100%;
+}
+
+.button-container {
+    text-align: center; /* Center-align the button within the container */
+    margin-top: 20px; /* Add margin for spacing */
+}
+
+.button {
+    margin-top: 15px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #484848;
+    color: #DADEDF;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for attention */
+}
+
+.button:hover {
+    background-color: black;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Change box shadow on hover */
+}
+
+@keyframes moveLeftToRight {
+    0% {
+        transform: translateX(-100%); /* Start at the left edge of the viewport */
+    }
+    100% {
+        transform: translateX(100%); /* Move to the right edge of the viewport */
+    }
+}
+
+h1 {
+    animation: moveLeftToRight 3s linear infinite; /* Faster and smoother with a 3-second duration */
+}
+
+/* Define the keyframes for the jump animation */
+@keyframes jumpAround {
+    0% {
+        transform: translate(0, 0); /* Start at the original position */
+    }
+    25% {
+        transform: translate(-50px, -10px); /* Jump to the top-left */
+    }
+    50% {
+        transform: translate(50px, -10px); /* Jump to the top-right */
+    }
+    75% {
+        transform: translate(-50px, 10px); /* Jump to the bottom-left */
+    }
+    100% {
+        transform: translate(50px, 10px); /* Jump to the bottom-right */
+    }
+}
+
+
+.jumping-text {
+    animation: jumpAround 2s linear infinite alternate; /* Adjust the duration and timing as needed */
+}

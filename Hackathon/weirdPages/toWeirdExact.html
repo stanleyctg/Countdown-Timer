@@ -1,0 +1,148 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Exact</title>
+    <link rel="stylesheet" href="..\styles\WeirdTo.css">
+    
+    <script>
+        function getTimeRemaining(targetDate) {
+            const currentDate = new Date();
+            if (currentDate > targetDate) {
+                targetDate.setFullYear(targetDate.getFullYear() + 1);
+            }
+
+            const timeRemaining = targetDate - currentDate;
+
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60) / 1000));
+
+            return {
+                days: String(days).padStart(2, '0'),
+                hours: String(hours).padStart(2, '0'),
+                minutes: String(minutes).padStart(2, '0'),
+                seconds: String(seconds).padStart(2, '0')
+            };
+        }
+
+        function updateCountdown(targetElement, targetDate) {
+            const time = getTimeRemaining(targetDate);
+            const countdown = targetElement.querySelector(".countdown");
+            countdown.querySelector("#days").textContent = time.days;
+            countdown.querySelector("#hours").textContent = time.hours;
+            countdown.querySelector("#minutes").textContent = time.minutes;
+            countdown.querySelector("#seconds").textContent = time.seconds;
+        }
+
+        const christmasDate = new Date(new Date().getFullYear(), 11, 25);
+        const newYearsDate = new Date(new Date().getFullYear() + 1, 0, 15);
+        const finalsDate = new Date(new Date().getFullYear() + 1, 4, 13);
+        const summerDate = new Date(new Date().getFullYear() + 1, 5, 6);
+
+        setInterval(function () {
+            updateCountdown(document.getElementById("Christmas"), christmasDate);
+            updateCountdown(document.getElementById("Exam"), newYearsDate);
+            updateCountdown(document.getElementById("Finals"), finalsDate);
+            updateCountdown(document.getElementById("Summer"), summerDate);
+        }, 1000);
+
+        updateCountdown(document.getElementById("Christmas"), christmasDate);
+        updateCountdown(document.getElementById("Exam"), newYearsDate);
+        updateCountdown(document.getElementById("Finals"), newYearsDate);
+        updateCountdown(document.getElementById("Summer"), summerDate);
+    </script>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar">
+            <img id="logo"
+                src="https://images.vexels.com/media/users/3/139546/isolated/preview/b21b7374b8048bce71e5e28af1dd7a70-alarm-clock.png"
+                alt="Logo">
+            <ul>
+                <li><a href="weirdSite.html">Hom</a></li>
+                <li><a href="toWeirdDays.html">To Deys</a></li>
+                <li><a href="toWeirdExact.html">To EZat Time</a></li>
+            </ul>
+            <div id="search">
+                <form>
+                    <input type="text" placeholder="Don Cli on mi" id="searchbox" />
+                    <input type="submit" id="search_button" />
+                </form>
+            </div>
+        </nav>
+    </div>
+
+    <div id="title">
+        <h1>Coundown!!</h1>
+    </div>
+
+    <div class="countdown-grid">
+        <div class="countdown-box" id="Christmas">
+            <h1><b>Chrismes</b></h1>
+            <div class="countdown">
+                <div id="days">00</div>
+                <div>Deys</div>
+                <div id="hours">00</div>
+                <div>Ours</div>
+                <div id="minutes">00</div>
+                <div>Minits</div>
+                <div id="seconds">00</div>
+                <div>Sekends</div>
+            </div>
+        </div>
+
+        <div class="countdown-box" id="Exam">
+            <h1><b>Mid Term</b></h1>
+            <div class="countdown">
+                <div id="days">00</div>
+                <div>Deys</div>
+                <div id="hours">00</div>
+                <div>Ours</div>
+                <div id="minutes">00</div>
+                <div>Minits</div>
+                <div id="seconds">00</div>
+                <div>Sekends</div>
+            </div>
+        </div>
+
+        <div class="countdown-box" id="Finals">
+            <h1><b>Finals</b></h1>
+            <div class="countdown">
+                <div id="days">00</div>
+                <div>Deys</div>
+                <div id="hours">00</div>
+                <div>Ours</div>
+                <div id="minutes">00</div>
+                <div>Minits</div>
+                <div id="seconds">00</div>
+                <div>Sekends</div>
+            </div>
+        </div>
+
+        <div class="countdown-box" id="Summer">
+            <h1><b>Summer Break</b></h1>
+            <div class="countdown">
+                <div id="days">00</div>
+                <div>Deys</div>
+                <div id="hours">00</div>
+                <div>Ours</div>
+                <div id="minutes">00</div>
+                <div>Minits</div>
+                <div id="seconds">00</div>
+                <div>Sekends</div>
+            </div>
+        </div>
+    </div>
+    <div class="button-container">
+        <a href="..\normalPages\toExact.html" class="button" class="page-transition">Change to Normal Design</a>
+    </div>
+    <footer>
+        <p>&copy; 2023 UM Tim. All nights reseved 4 coding.</p>
+    </footer>
+</body>
+</html>
+
